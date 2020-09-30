@@ -1,0 +1,97 @@
+html, body, #map-canvas {
+	height: 100%;
+	margin: 0px;
+	padding: 0px
+}
+
+* {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+#map-form {
+	position: absolute;
+	left: 10px;
+	z-index: 10000;
+	display: none;
+	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.5);
+	padding: 5px 10px;
+	top: 100px;
+/*	transform: translateY(-50%); */
+	text-align: center;
+}
+
+select[multiple] {
+  height:350px;
+	width: 175px;
+  display: block;
+}
+	#aliases {
+		margin-top: 5px;
+		height: 150px;
+	}
+
+#info {
+	width: 153px;
+	background-color: white;
+	padding: 10px;
+	font-size: 0.7rem;
+	margin-top: 0px; margin-bottom: 5px;
+	border: 1px solid #333;
+	font-family: "Consolas", monospaced;
+	text-align: left;
+}
+
+	#info br {
+		display: block;
+		content: " ";
+		margin-bottom: 5px;
+	}
+
+#timeline-all, #aliases-all {
+	margin: 5px auto 5px; 
+	padding: 7px 10px;
+	font-size: 0.7rem;
+}
+    .map-marker-label{
+        position: absolute;
+    color: blue;
+    font-size: 16px;
+    font-weight: bold;
+    }
+
+.infobox {
+	border: 1px solid black;
+	background-color: white;
+	text-align: center;
+	font-size: 9pt;
+	width: 50px;
+	display: none;
+}
+
+#label-toggle-container {
+	font-size: 0.7em;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	vertical-align: center;
+/*	border: 1px solid #333;
+	background-color: rgba(0,0,0, 0.5);*/
+}
+
+#label-toggle-container label {
+  display: block;
+  padding-left: 15px;
+  text-indent: -15px;
+}
+#label-toggle-container input {
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  margin:0;
+  vertical-align: bottom;
+  position: relative;
+  top: -1px;
+  *overflow: hidden;
+}
