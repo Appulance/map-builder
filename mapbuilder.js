@@ -69,7 +69,19 @@ function radixBucketSort (arr) {
     }
 }
 
-$(document).ready(function () {
+$(document).ready(async function () {
+	var script = document.createElement('script');
+	/*script.onload = function () {
+	    //do stuff with the script
+	};*/
+	script.src = "https://appulance.com/mapbuilder/js/infobox.min.js";
+
+	document.head.appendChild(script); //or something of the likes
+
+//	alert("This is a test version of Map Builder and could stop working at any time.");
+
+	await sleep(400);
+
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -82,7 +94,7 @@ $(document).ready(function () {
 	ga(function(tracker) {
  		localStorage.setItem(someKey, tracker.get('clientId'));
 	})
-	ga('set', 'page', 'viewMapWithTimeline');
+	ga('set', 'page', 'testViewMapWithTimelineAndLabels');
 	ga('send', 'pageview');
 
 	map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
@@ -114,11 +126,13 @@ $(document).ready(function () {
 			//console.log("iterating...");
 			current = markers[i].serial.toString();
 			current_alias = markers[i].alias.toString();
+			label_id = ".infobox-" + markers[i].serial.toString();
 			//console.log(selected + "=" + current + "? " + selected.includes(current));
 
 			if (selected.includes(current) == true && selected_alias.includes(current_alias)) {
 				markers[i].setVisible(true);
 				//bounds.extend(markers[i].position);
+				if (label_status) $(label_id).show();
 
 				if (selected_times_count == 1) {
 				//	$("#info").remove();
@@ -131,14 +145,28 @@ $(document).ready(function () {
 				}
 			} else {
 				markers[i].setVisible(false);
+				if (label_status) $(label_id).hide();
 			}
+		}
+	});
+
+	var label_status = $("#label-toggle").is(":checked");
+
+	$("#label-toggle").change(function() {
+		label_status = $("#label-toggle").is(":checked");
+
+		if (label_status == true) {
+			// check what aliases and timelines are selected, and show them
+			$(".infobox").show();
+		} else  {
+			// otherwise hide
+			$(".infobox").hide();
 		}
 	});
 
 	$("#aliases").change(function() {
                 selected = $(this).val(); 
                 //console.log("Selected: " + selected);
-
 		bounds = new google.maps.LatLngBounds();
 		$("#timeline").empty(); 
 
@@ -150,10 +178,14 @@ $(document).ready(function () {
                         //console.log("iterating...");
 //                        current = markers[i].alias.toString();
 			current = markers[i].alias; 
+                        label_id = ".infobox-" + markers[i].serial.toString();
+
                        //console.log(selected + "=" + current + "? " + selected.includes(current));
 
                         if (selected.includes(current) == true) {
                                 markers[i].setVisible(true);
+				if (label_status) $(label_id).show();
+
 				bounds.extend(markers[i].position);
 //				serial = markers[i].serial.toString();
 				serial = markers[i].serial;
@@ -161,6 +193,7 @@ $(document).ready(function () {
 				$('#timeline').append(new Option(datetime.toLocaleDateString("en-AU") + " " + datetime.toLocaleTimeString("en-AU"), serial, true, true));
                         } else {
                                 markers[i].setVisible(false);
+				if (label_status) $(label_id).hide();
                         }
                 }
 		map.fitBounds(bounds);
@@ -190,6 +223,11 @@ var stringToColour = function(str) {
 		colour += ('00' + value.toString(16)).substr(-2);
 	}
 	return colour;
+}
+
+function getMarkerURLWithLabel (str, lab) {
+        var color = stringToColour(str).substr(1);
+        return "http://www.googlemapsmarkers.com/v1/" + "test" + "/" + "FFFFFF" + "/"  + color + "/" + ldColour(color, 40) + "/";
 }
 
 function getMarkerURL(str) {
@@ -228,6 +266,8 @@ function addMarker(lat, lon, datetime, alias="Single", label = "", color = "blue
 	var position = new google.maps.LatLng(lat, lon);
 
 	var date = new Date(datetime);
+//	var time = date.getHours().toString().padStart(2, '0') + ":" + date.getMinutes().toString().padStart(2, '0') + ":" + date.getSeconds().toString().padStart(2, '0');
+	var time = date.toLocaleString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
 //	var pinUrl = getPinUrlByHour(date.getHours());
 	var pinUrl = getMarkerURL(alias);
 	var serial = date.getTime();
@@ -255,8 +295,24 @@ function addMarker(lat, lon, datetime, alias="Single", label = "", color = "blue
 		},
 		serial: serial,
 		alias: alias,
-		title: label
+		title: label,
+	//	label: "test"
 	});
+
+			var myOptions = {
+			 content: time
+			,boxClass: "infobox infobox-" + serial
+			,disableAutoPan: true
+			,pixelOffset: new google.maps.Size(-25, 0)
+			,position: position
+			,closeBoxURL: ""
+			,isHidden: false
+			,pane: "mapPane"
+			,enableEventPropagation: true
+		};
+
+		var ibLabel = new InfoBox(myOptions);
+		ibLabel.open(map);
 
 	marker.addListener("click", () => {
  		//map.setZoom(8);
@@ -366,6 +422,8 @@ function addMarkersToAliases(arr) {
 	}, []);
 
         $("#aliases").parent().append("<button id='aliases-all' type='button'>Select All Vehicles</button>");
+
+	$("#aliases").parent().prepend("<div id='label-toggle-container'><label for='label-toggle'><input type='checkbox' id='label-toggle' /> Show labels?</label></div>");
 
         $("#aliases-all").on('click', function() {
 //                ga('set', 'page', 'aliasesSelectAll');
