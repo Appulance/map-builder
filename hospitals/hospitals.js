@@ -54,9 +54,8 @@ Hospital.prototype.addMarker = function() {
 		icon: {
 			url: 'https://appulance.com/mapbuilder/hospitals/hospital.svg'
 		},
-		title: this.id,
-		serial: "hospital",
-		alias: "hospital",
+		id: "hospital-" + this.id,
+		title: this.name,
 		zIndex: 1000
 	});
 	marker.setMap(map);
