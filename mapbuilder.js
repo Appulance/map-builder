@@ -74,7 +74,7 @@ $(document).ready(async function () {
 				markers[i].setVisible(true);
 
 				// zoom to pin?
-				//bounds.extend(markers[i].position);
+				bounds.extend(markers[i].position);
 
 				// show label for this pin
 				if (label_status) $(label_id).show();
