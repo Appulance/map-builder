@@ -13,7 +13,7 @@
 		"lon": "153.1196"
 	},
 	{
-		"id": "1803",
+		"id": "NDH",
 		"name": "Noosa District Hospital",
 		"lat": "-26.402893",
 		"lon": "153.045001"
@@ -61,7 +61,7 @@
 		"lon": "153.094847"
 	},
 	{
-		"id": "PR201",
+		"id": "gympie-private",
 		"name": "Gympie Private Hospital",
 		"lat": "-26.184761",
 		"lon": "152.664626"
@@ -91,13 +91,13 @@
 		"lon": "153.0237"
 	},
 	{
-		"id": "PH32",
+		"id": "caboolture-hospital",
 		"name": "Caboolture Hospital",
 		"lat": "-27.080067",
 		"lon": "152.963719"
 	},
 	{
-		"id": "1627",
+		"id": "RDH",
 		"name": "Redcliffe Hospital",
 		"lat": "-27.22731",
 		"lon": "153.103559"
@@ -169,25 +169,25 @@
 		"lon": "153.140788"
 	},
 	{
-		"id": "1338",
+		"id": "QE2",
 		"name": "QEII Hospital",
 		"lat": "-27.559769",
 		"lon": "153.050451"
 	},
 	{
-		"id": "1339",
+		"id": "RLH",
 		"name": "Redlands Hospital",
 		"lat": "-27.541467",
 		"lon": "153.251215"
 	},
 	{
-		"id": "1341",
+		"id": "wynnum-hospital",
 		"name": "Wynnum Hospital",
 		"lat": "-27.46468",
 		"lon": "153.181043"
 	},
 	{
-		"id": "ME164",
+		"id": "MMH",
 		"name": "Mater Mothers Hospital",
 		"lat": "-27.485321",
 		"lon": "153.027379"
@@ -211,13 +211,13 @@
 		"lon": "153.048005"
 	},
 	{
-		"id": "ME112",
+		"id": "MPH",
 		"name": "Mater Private Hospital",
 		"lat": "-27.483584",
 		"lon": "153.029015"
 	},
 	{
-		"id": "ME711",
+		"id": "weinum-creek",
 		"name": "Weinam Creek Marina",
 		"lat": "-27.619064",
 		"lon": "153.309272"
@@ -229,7 +229,7 @@
 		"lon": "153.382139"
 	},
 	{
-		"id": "6SVR",
+		"id": "GCUHRB",
 		"name": "Robina Hospital",
 		"lat": "-28.070229",
 		"lon": "153.376747"
@@ -239,12 +239,6 @@
 		"name": "Tweed Heads Hospital",
 		"lat": "-28.1782",
 		"lon": "153.545169"
-	},
-	{
-		"id": "GCUH6",
-		"name": "Gold Coast Uni Hosp Paediatric",
-		"lat": "-27.9589972",
-		"lon": "153.382139"
 	},
 	{
 		"id": "APH",
@@ -259,7 +253,7 @@
 		"lon": "153.489379"
 	},
 	{
-		"id": "1792",
+		"id": "pindarra-private",
 		"name": "Pindara Private Hospital",
 		"lat": "-28.006309",
 		"lon": "153.393667"
@@ -277,7 +271,7 @@
 		"lon": "152.678"
 	},
 	{
-		"id": "1643",
+		"id": "laidley-hospital",
 		"name": "Laidley Hospital",
 		"lat": "-27.632507",
 		"lon": "152.40067"
