@@ -58,7 +58,8 @@ Station.prototype.addMarker = function() {
 		serial: "station"
 	});
 
-	markers.push(marker);
+	marker.setMap(map);
+	//markers.push(marker);
 }
 
 
