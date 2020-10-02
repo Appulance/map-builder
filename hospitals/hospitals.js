@@ -97,7 +97,7 @@ Hospital.prototype.quantifyTravel = function(from) {
 ////////////////////////////////////////////////////////////////////////////////
 
 function HospitalsIterator() {
-	$.getJSON("https://appulance.com/mapbuilder/hospitals/hospitals2.json", function(data) {
+	$.getJSON("https://appulance.com/mapbuilder/hospitals/hospitals.json", function(data) {
 	}).done(function(data) {
 		$.each(data.hospitals, function(index, hospital) {
 			console.log("Adding hospital " + hospital.name);
