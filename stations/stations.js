@@ -52,10 +52,9 @@ Station.prototype.addMarker = function() {
 		icon: {
 			url: 'https://appulance.com/mapbuilder/stations/station.svg'
 		},
-		title: this.id,
-		alias: "station",
+		serial: "hospital-" + this.id,
+		title: this.name,
 		zIndex: 1000,
-		serial: "station"
 	});
 
 	marker.setMap(map);
