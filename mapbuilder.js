@@ -40,6 +40,8 @@ $(document).ready(async function () {
     	zoom: 2,
 		center: new google.maps.LatLng(0, 0),
 		styles: styles['default'],
+		streetViewControl: false,
+		mapTypeControlOptions: { mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.HYBRID] }
 	}
 	map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
