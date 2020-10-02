@@ -42,7 +42,7 @@ $(document).ready(async function () {
 	ga(function(tracker) {
  		localStorage.setItem(someKey, tracker.get('clientId'));
 	})
-	ga('set', 'page', 'testViewMapWithTimelineAndLabels');
+	ga('set', 'page', 'mapViewWithPOI');
 	ga('send', 'pageview');
 
 	map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
