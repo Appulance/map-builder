@@ -74,7 +74,7 @@ $(document).ready(async function () {
 				markers[i].setVisible(true);
 
 				// zoom to pin?
-				//bounds.extend(markers[i].position);
+				bounds.extend(markers[i].position);
 
 				// show label for this pin
 				if (label_status) $(label_id).show();
@@ -91,6 +91,8 @@ $(document).ready(async function () {
 				if (label_status) $(label_id).hide();
 			}
 		}
+
+		map.fitBounds(bounds);
 	});
 
 	var label_status = $("#label-toggle").is(":checked");
