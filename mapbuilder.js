@@ -3,7 +3,8 @@ var bounds = new google.maps.LatLngBounds();
 
 var mapOptions = {
     	zoom: 2,
-    	center: new google.maps.LatLng(0, 0),
+		center: new google.maps.LatLng(0, 0),
+		styles = styles['default'],
 }
 
 var markers = [];
@@ -122,7 +123,7 @@ $(document).ready(async function () {
 			$("#map-form").css('color', 'white');
 		} else  {
 			// otherwise hide
-			map.setOptions({ styles: [] });
+			map.setOptions({ styles: styles['default'] });
 			$("#map-form").css('color', 'black');
 		}
 	});
