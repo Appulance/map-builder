@@ -59,8 +59,8 @@ Hospital.prototype.addMarker = function() {
 		alias: "hospital",
 		zIndex: 1000
 	});
-
-	markers.push(marker);
+	marker.setMap(map);
+//markers.push(marker);
 }
 
 /*Hospital.prototype.showInformation = function() {
