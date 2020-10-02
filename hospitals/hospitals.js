@@ -59,37 +59,7 @@ Hospital.prototype.addMarker = function() {
 		zIndex: 1000
 	});
 	marker.setMap(map);
-//markers.push(marker);
 }
-
-/*Hospital.prototype.showInformation = function() {
-	showHospitalInformation(this.id);
-}
-
-Hospital.prototype.quantifyTravel = function(from) {
-	var self = this;
-	return new Promise(
-		function (resolve, reject) {
-			var origin = from;
-			var dest = new google.maps.LatLng(self.lat, self.lon);
-			
-			GGetTravelTimeBetweenLocations([from], [dest])
-			.then(function(result) {
-				distance = result.rows[0].elements[0].distance.text;
-				time = result.rows[0].elements[0].duration.text;
-				traffic = result.rows[0].elements[0].duration_in_traffic.text;
-				ticks = result.rows[0].elements[0].duration_in_traffic.value;
-				
-				data = { travel: [ { to: self.id, "distance": distance, "time": time, "time_in_traffic": traffic, "ticks": ticks } ] };
-				resolve(data)
-			})
-			.catch(function(error) {
-				var reason = new Error('[BMGenerateLocationFromAddress] ' + error);
-	            reject(reason);
-			});	
-	    }
-	);
-}*/
 
 ////////////////////////////////////////////////////////////////////////////////
 // Hospital Utility Functions
