@@ -785,6 +785,12 @@
     "station": "Yarraman",
     "lat": -26.8416,
     "lon": 151.98286
+  },
+  {
+    "id": "pimpama",
+    "station": "Pimpama",
+    "lat": -27.814353,
+    "lon": 153.291454
   }
 ]
 }
