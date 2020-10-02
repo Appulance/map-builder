@@ -91,6 +91,8 @@ $(document).ready(async function () {
 				if (label_status) $(label_id).hide();
 			}
 		}
+
+		//map.fitBounds(bounds);
 	});
 
 	var label_status = $("#label-toggle").is(":checked");
