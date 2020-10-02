@@ -1,0 +1,790 @@
+{
+"stations": [
+  {
+    "id": "agnes-water",
+    "station": "Agnes Water",
+    "lat": -24.24093,
+    "lon": 151.86422
+  },
+  {
+    "id": "ashgrove",
+    "station": "Ashgrove",
+    "lat": -27.44861,
+    "lon": 152.96833
+  },
+  {
+    "id": "balmoral",
+    "station": "Balmoral",
+    "lat": -27.45968,
+    "lon": 153.07171
+  },
+  {
+    "id": "beaudesert",
+    "station": "Beaudesert",
+    "lat": -27.98586,
+    "lon": 153.00249
+  },
+  {
+    "id": "beenleigh",
+    "station": "Beenleigh",
+    "lat": -27.70301,
+    "lon": 153.2012
+  },
+  {
+    "id": "beerwah",
+    "station": "Beerwah",
+    "lat": -26.85503,
+    "lon": 152.95918
+  },
+  {
+    "id": "biggenden",
+    "station": "Biggenden",
+    "lat": -25.51037,
+    "lon": 152.04536
+  },
+  {
+    "id": "birkdale",
+    "station": "Birkdale",
+    "lat": -27.49328,
+    "lon": 153.21769
+  },
+  {
+    "id": "boonah",
+    "station": "Boonah",
+    "lat": -27.99305,
+    "lon": 152.68568
+  },
+  {
+    "id": "bribie-island",
+    "station": "Bribie Island",
+    "lat": -27.08329,
+    "lon": 153.15959
+  },
+  {
+    "id": "buderim",
+    "station": "Buderim",
+    "lat": -26.71275,
+    "lon": 153.0485
+  },
+  {
+    "id": "bundaberg",
+    "station": "Bundaberg",
+    "lat": -24.8703,
+    "lon": 152.33156
+  },
+  {
+    "id": "burleigh-heads",
+    "station": "Burleigh Heads",
+    "lat": -28.09914,
+    "lon": 153.44311
+  },
+  {
+    "id": "burnett-coast",
+    "station": "Burnett Coast",
+    "lat": -24.84173,
+    "lon": 152.41028
+  },
+  {
+    "id": "caboolture",
+    "station": "Caboolture",
+    "lat": -27.08579,
+    "lon": 152.96101
+  },
+  {
+    "id": "caloundra",
+    "station": "Caloundra",
+    "lat": -26.80195,
+    "lon": 153.12004
+  },
+  {
+    "id": "canungra",
+    "station": "Canungra",
+    "lat": -28.01672,
+    "lon": 153.16293
+  },
+  {
+    "id": "capalaba",
+    "station": "Capalaba",
+    "lat": -27.54264,
+    "lon": 153.19017
+  },
+  {
+    "id": "carina",
+    "station": "Carina",
+    "lat": -27.49646,
+    "lon": 153.09942
+  },
+  {
+    "id": "mb",
+    "station": "Centenary",
+    "lat": -27.55946,
+    "lon": 152.94295
+  },
+  {
+    "id": "charleville",
+    "station": "Charleville",
+    "lat": -26.4041,
+    "lon": 146.23938
+  },
+  {
+    "id": "chermside",
+    "station": "Chermside",
+    "lat": -27.38513,
+    "lon": 153.02409
+  },
+  {
+    "id": "childers",
+    "station": "Childers",
+    "lat": -25.23614,
+    "lon": 152.27751
+  },
+  {
+    "id": "chinchilla",
+    "station": "Chinchilla",
+    "lat": -26.74126,
+    "lon": 150.62427
+  },
+  {
+    "id": "cleveland",
+    "station": "Cleveland",
+    "lat": -27.52804,
+    "lon": 153.25519
+  },
+  {
+    "id": "clifton",
+    "station": "Clifton",
+    "lat": -27.93099,
+    "lon": 151.90817
+  },
+  {
+    "id": "coolangatta",
+    "station": "Coolangatta",
+    "lat": -28.16087,
+    "lon": 153.51072
+  },
+  {
+    "id": "cooloola-coast",
+    "station": "Cooloola Coast",
+    "lat": -25.91695,
+    "lon": 153.00362
+  },
+  {
+    "id": "coolum",
+    "station": "Coolum",
+    "lat": -26.52778,
+    "lon": 153.08998
+  },
+  {
+    "id": "coomera",
+    "station": "Coomera",
+    "lat": -27.85546,
+    "lon": 153.31582
+  },
+  {
+    "id": "cooroy",
+    "station": "Cooroy",
+    "lat": -26.41622,
+    "lon": 152.91436
+  },
+  {
+    "id": "coral-gardens",
+    "station": "Coral Gardens",
+    "lat": -28.04753,
+    "lon": 153.40905
+  },
+  {
+    "id": "crows-nest",
+    "station": "Crows Nest",
+    "lat": -27.26239,
+    "lon": 152.05389
+  },
+  {
+    "id": "cunnamulla",
+    "station": "Cunnamulla",
+    "lat": -28.07223,
+    "lon": 145.69038
+  },
+  {
+    "id": "dalby",
+    "station": "Dalby",
+    "lat": -27.18559,
+    "lon": 151.26036
+  },
+  {
+    "id": "dayboro",
+    "station": "Dayboro",
+    "lat": -27.19142,
+    "lon": 152.81356
+  },
+  {
+    "id": "deception-bay",
+    "station": "Deception Bay",
+    "lat": -27.19215,
+    "lon": 153.02138
+  },
+  {
+    "id": "dirranbandi",
+    "station": "Dirranbandi",
+    "lat": -28.57974,
+    "lon": 148.22904
+  },
+  {
+    "id": "dunwich",
+    "station": "Dunwich",
+    "lat": -27.49729,
+    "lon": 153.39994
+  },
+  {
+    "id": "durack",
+    "station": "Durack",
+    "lat": -27.58744,
+    "lon": 152.98593
+  },
+  {
+    "id": "eatons-hill",
+    "station": "Eatons Hill",
+    "lat": -27.33709,
+    "lon": 152.96025
+  },
+  {
+    "id": "eidsvold",
+    "station": "Eidsvold",
+    "lat": -25.37046,
+    "lon": 151.12288
+  },
+  {
+    "id": "fairview",
+    "station": "Fairview",
+    "lat": -27.53506,
+    "lon": 151.90315
+  },
+  {
+    "id": "gatton",
+    "station": "Gatton",
+    "lat": -27.55879,
+    "lon": 152.27474
+  },
+  {
+    "id": "gayndah",
+    "station": "Gayndah",
+    "lat": -25.62591,
+    "lon": 151.60945
+  },
+  {
+    "id": "gin-gin",
+    "station": "Gin Gin",
+    "lat": -24.98707,
+    "lon": 151.95381
+  },
+  {
+    "id": "goondiwindi",
+    "station": "Goondiwindi",
+    "lat": -28.54766,
+    "lon": 150.31361
+  },
+  {
+    "id": "gympie",
+    "station": "Gympie",
+    "lat": -26.18586,
+    "lon": 152.65796
+  },
+  {
+    "id": "happy-valley",
+    "station": "Happy Valley",
+    "lat": -25.3362,
+    "lon": 153.2019
+  },
+  {
+    "id": "helensvale",
+    "station": "Helensvale",
+    "lat": -27.93653,
+    "lon": 153.33668
+  },
+  {
+    "id": "hervey-bay",
+    "station": "Hervey Bay",
+    "lat": -25.28581,
+    "lon": 152.85133
+  },
+  {
+    "id": "highfields",
+    "station": "Highfields",
+    "lat": -27.45588,
+    "lon": 151.9407
+  },
+  {
+    "id": "howard",
+    "station": "Howard",
+    "lat": -25.32165,
+    "lon": 152.56026
+  },
+  {
+    "id": "inglewood",
+    "station": "Inglewood",
+    "lat": -28.41778,
+    "lon": 151.08103
+  },
+  {
+    "id": "injune",
+    "station": "Injune",
+    "lat": -25.84125,
+    "lon": 148.5672
+  },
+  {
+    "id": "ipswich",
+    "station": "Ipswich",
+    "lat": -27.61979,
+    "lon": 152.76493
+  },
+  {
+    "id": "jandowae",
+    "station": "Jandowae",
+    "lat": -26.78074,
+    "lon": 151.11047
+  },
+  {
+    "id": "jimboomba",
+    "station": "Jimboomba",
+    "lat": -27.82886,
+    "lon": 153.02516
+  },
+  {
+    "id": "kawana",
+    "station": "Kawana",
+    "lat": -26.70484,
+    "lon": 153.13154
+  },
+  {
+    "id": "kedron-park",
+    "station": "Kedron Park",
+    "lat": -27.41542,
+    "lon": 153.03747
+  },
+  {
+    "id": "kenmore",
+    "station": "Kenmore",
+    "lat": -27.50722,
+    "lon": 152.95058
+  },
+  {
+    "id": "kilcoy",
+    "station": "Kilcoy",
+    "lat": -26.94209,
+    "lon": 152.56388
+  },
+  {
+    "id": "kingaroy",
+    "station": "Kingaroy",
+    "lat": -26.53658,
+    "lon": 151.83915
+  },
+  {
+    "id": "laidley",
+    "station": "Laidley",
+    "lat": -27.62886,
+    "lon": 152.39444
+  },
+  {
+    "id": "logan-west",
+    "station": "Logan West",
+    "lat": -27.67773,
+    "lon": 153.0302
+  },
+  {
+    "id": "lowood",
+    "station": "Lowood",
+    "lat": -27.46379,
+    "lon": 152.58133
+  },
+  {
+    "id": "macleay-island",
+    "station": "Macleay Island",
+    "lat": -27.62885,
+    "lon": 153.36317
+  },
+  {
+    "id": "maleny",
+    "station": "Maleny",
+    "lat": -26.75529,
+    "lon": 152.84557
+  },
+  {
+    "id": "maroochydore",
+    "station": "Maroochydore",
+    "lat": -26.66263,
+    "lon": 153.06517
+  },
+  {
+    "id": "maryborough",
+    "station": "Maryborough",
+    "lat": -25.52036,
+    "lon": 152.69161
+  },
+  {
+    "id": "meandarra",
+    "station": "Meandarra",
+    "lat": -27.32319,
+    "lon": 149.88194
+  },
+  {
+    "id": "miles",
+    "station": "Miles",
+    "lat": -26.65947,
+    "lon": 150.18371
+  },
+  {
+    "id": "millmerran",
+    "station": "Millmerran",
+    "lat": -27.87923,
+    "lon": 151.26841
+  },
+  {
+    "id": "miriam-vale",
+    "station": "Miriam Vale",
+    "lat": -24.32841,
+    "lon": 151.55962
+  },
+  {
+    "id": "mitchell",
+    "station": "Mitchell",
+    "lat": -26.48789,
+    "lon": 147.97539
+  },
+  {
+    "id": "mitchelton",
+    "station": "Mitchelton",
+    "lat": -27.41397,
+    "lon": 152.97535
+  },
+  {
+    "id": "monto",
+    "station": "Monto",
+    "lat": -24.86779,
+    "lon": 151.12159
+  },
+  {
+    "id": "mount-gravatt",
+    "station": "Mount Gravatt",
+    "lat": -27.54584,
+    "lon": 153.08205
+  },
+  {
+    "id": "mount-tamborine",
+    "station": "Mount Tamborine",
+    "lat": -27.93617,
+    "lon": 153.18038
+  },
+  {
+    "id": "mudgeeraba",
+    "station": "Mudgeeraba",
+    "lat": -28.05296,
+    "lon": 153.35536
+  },
+  {
+    "id": "mundubbera",
+    "station": "Mundubbera",
+    "lat": -25.58731,
+    "lon": 151.29448
+  },
+  {
+    "id": "murgon",
+    "station": "Murgon",
+    "lat": -26.244,
+    "lon": 151.94301
+  },
+  {
+    "id": "nambour",
+    "station": "Nambour",
+    "lat": -26.61772,
+    "lon": 152.96248
+  },
+  {
+    "id": "nanango",
+    "station": "Nanango",
+    "lat": -26.67095,
+    "lon": 151.99766
+  },
+  {
+    "id": "narangba",
+    "station": "Narangba",
+    "lat": -27.18654,
+    "lon": 152.93553
+  },
+  {
+    "id": "nathan",
+    "station": "Nathan",
+    "lat": -27.54427,
+    "lon": 153.03964
+  },
+  {
+    "id": "nerang",
+    "station": "Nerang",
+    "lat": -28.00552,
+    "lon": 153.33827
+  },
+  {
+    "id": "ningi",
+    "station": "Ningi",
+    "lat": -27.07162,
+    "lon": 153.05935
+  },
+  {
+    "id": "noosa-heads",
+    "station": "Noosa Heads",
+    "lat": -26.40866,
+    "lon": 153.09065
+  },
+  {
+    "id": "north-lakes",
+    "station": "North Lakes",
+    "lat": -27.23991,
+    "lon": 153.02192
+  },
+  {
+    "id": "northgate",
+    "station": "Northgate",
+    "lat": -27.3969,
+    "lon": 153.07416
+  },
+  {
+    "id": "oakey",
+    "station": "Oakey",
+    "lat": -27.43319,
+    "lon": 151.71914
+  },
+  {
+    "id": "petrie",
+    "station": "Petrie",
+    "lat": -27.27082,
+    "lon": 152.97791
+  },
+  {
+    "id": "pinjarra-hills",
+    "station": "Pinjarra Hills",
+    "lat": -27.54307,
+    "lon": 152.89831
+  },
+  {
+    "id": "pittsworth",
+    "station": "Pittsworth",
+    "lat": -27.71664,
+    "lon": 151.63487
+  },
+  {
+    "id": "point-lookout",
+    "station": "Point Lookout",
+    "lat": -27.42636,
+    "lon": 153.52003
+  },
+  {
+    "id": "pomona",
+    "station": "Pomona",
+    "lat": -26.3657,
+    "lon": 152.85434
+  },
+  {
+    "id": "proston",
+    "station": "Proston",
+    "lat": -26.16117,
+    "lon": 151.59963
+  },
+  {
+    "id": "rainbow-beach",
+    "station": "Rainbow Beach",
+    "lat": -25.90514,
+    "lon": 153.09082
+  },
+  {
+    "id": "redbank",
+    "station": "Redbank",
+    "lat": -27.60224,
+    "lon": 152.86649
+  },
+  {
+    "id": "redcliffe",
+    "station": "Redcliffe",
+    "lat": -27.23363,
+    "lon": 153.10906
+  },
+  {
+    "id": "redland-bay",
+    "station": "Redland Bay",
+    "lat": -27.61144,
+    "lon": 153.28912
+  },
+  {
+    "id": "roma",
+    "station": "Roma",
+    "lat": -26.57341,
+    "lon": 148.789
+  },
+  {
+    "id": "roma-street",
+    "station": "Roma Street",
+    "lat": -27.46593,
+    "lon": 153.01522
+  },
+  {
+    "id": "rosewood",
+    "station": "Rosewood",
+    "lat": -27.63777,
+    "lon": 152.59148
+  },
+  {
+    "id": "runaway-bay",
+    "station": "Runaway Bay",
+    "lat": -27.9114,
+    "lon": 153.39763
+  },
+  {
+    "id": "russell-island",
+    "station": "Russell Island",
+    "lat": -27.66216,
+    "lon": 153.37957
+  },
+  {
+    "id": "samford",
+    "station": "Samford",
+    "lat": -27.37346,
+    "lon": 152.88472
+  },
+  {
+    "id": "sandgate",
+    "station": "Sandgate",
+    "lat": -27.31224,
+    "lon": 153.04331
+  },
+  {
+    "id": "south-brisbane",
+    "station": "South Brisbane",
+    "lat": -27.49565,
+    "lon": 153.04154
+  },
+  {
+    "id": "southport",
+    "station": "Southport",
+    "lat": -27.97534,
+    "lon": 153.39541
+  },
+  {
+    "id": "special-operations-response",
+    "station": "Special Operations Response",
+    "lat": -27.23991,
+    "lon": 153.02192
+  },
+  {
+    "id": "spring-hill",
+    "station": "Spring Hill",
+    "lat": -27.46135,
+    "lon": 153.02886
+  },
+  {
+    "id": "springfield",
+    "station": "Springfield",
+    "lat": -27.68327,
+    "lon": 152.90686
+  },
+  {
+    "id": "springwood",
+    "station": "Springwood",
+    "lat": -27.61586,
+    "lon": 153.12552
+  },
+  {
+    "id": "st-george",
+    "station": "St George",
+    "lat": -28.03371,
+    "lon": 148.58605
+  },
+  {
+    "id": "stanthorpe",
+    "station": "Stanthorpe",
+    "lat": -28.65256,
+    "lon": 151.93328
+  },
+  {
+    "id": "sunnybank-hills",
+    "station": "Sunnybank Hills",
+    "lat": -27.58824,
+    "lon": 153.04561
+  },
+  {
+    "id": "surat",
+    "station": "Surat",
+    "lat": -27.15234,
+    "lon": 149.06652
+  },
+  {
+    "id": "tara",
+    "station": "Tara",
+    "lat": -27.27618,
+    "lon": 150.45531
+  },
+  {
+    "id": "taroom",
+    "station": "Taroom",
+    "lat": -25.63951,
+    "lon": 149.80009
+  },
+  {
+    "id": "tewantin",
+    "station": "Tewantin",
+    "lat": -26.39376,
+    "lon": 153.02681
+  },
+  {
+    "id": "texas",
+    "station": "Texas",
+    "lat": -28.85751,
+    "lon": 151.17844
+  },
+  {
+    "id": "toogoolawah",
+    "station": "Toogoolawah",
+    "lat": -27.08798,
+    "lon": 152.37386
+  },
+  {
+    "id": "toowoomba",
+    "station": "Toowoomba",
+    "lat": -27.56502,
+    "lon": 151.951
+  },
+  {
+    "id": "wandoan",
+    "station": "Wandoan",
+    "lat": -26.12184,
+    "lon": 149.95934
+  },
+  {
+    "id": "warwick",
+    "station": "Warwick",
+    "lat": -28.21819,
+    "lon": 152.03389
+  },
+  {
+    "id": "woodford",
+    "station": "Woodford",
+    "lat": -26.96337,
+    "lon": 152.78063
+  },
+  {
+    "id": "woodridge",
+    "station": "Woodridge",
+    "lat": -27.63178,
+    "lon": 153.11004
+  },
+  {
+    "id": "wynnum",
+    "station": "Wynnum",
+    "lat": -27.46515,
+    "lon": 153.1821
+  },
+  {
+    "id": "yarraman",
+    "station": "Yarraman",
+    "lat": -26.8416,
+    "lon": 151.98286
+  }
+]
+}

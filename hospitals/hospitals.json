@@ -1,0 +1,316 @@
+{
+"hospitals": [
+	{
+		"id": "4NGH",
+		"name": "Nambour General Hospital",
+		"lat": "-26.621661",
+		"lon": "152.952988"
+	},
+	{
+		"id": "4CGH",
+		"name": "Caloundra Health Service",
+		"lat": "-26.8009",
+		"lon": "153.1196"
+	},
+	{
+		"id": "1803",
+		"name": "Noosa District Hospital",
+		"lat": "-26.402893",
+		"lon": "153.045001"
+	},
+	{
+		"id": "4GGH",
+		"name": "Gympie General Hospital",
+		"lat": "-26.184364",
+		"lon": "152.65902"
+	},
+	{
+		"id": "4MDH",
+		"name": "Maleny District Hospital",
+		"lat": "-26.75502",
+		"lon": "152.84525"
+	},
+	{
+		"id": "4SCUH",
+		"name": "Sunshine Coast University Public",
+		"lat": "-26.747744",
+		"lon": "153.112635"
+	},
+	{
+		"id": "Q4SPH",
+		"name": "Sunshine Coast University Private",
+		"lat": "-26.74417",
+		"lon": "153.11389"
+	},
+	{
+		"id": "4CPH",
+		"name": "Caloundra Private Clinic",
+		"lat": "-26.781634",
+		"lon": "153.126326"
+	},
+	{
+		"id": "4NPH",
+		"name": "Nambour Private Hospital",
+		"lat": "-26.620001",
+		"lon": "152.956499"
+	},
+	{
+		"id": "4BPH",
+		"name": "Buderim Private Hospital",
+		"lat": "-26.68347",
+		"lon": "153.094847"
+	},
+	{
+		"id": "PR201",
+		"name": "Gympie Private Hospital",
+		"lat": "-26.184761",
+		"lon": "152.664626"
+	},
+	{
+		"id": "BBH",
+		"name": "Bundaberg Base Hospital",
+		"lat": "-24.86935",
+		"lon": "152.336416"
+	},
+	{
+		"id": "RBH",
+		"name": "Royal Brisbane Hospital",
+		"lat": "-27.445863",
+		"lon": "153.028634"
+	},
+	{
+		"id": "PCH",
+		"name": "Prince Charles Hospital",
+		"lat": "-27.3899",
+		"lon": "153.0237"
+	},
+	{
+		"id": "PCHC",
+		"name": "Prince Charles Childrens",
+		"lat": "-27.3899",
+		"lon": "153.0237"
+	},
+	{
+		"id": "PH32",
+		"name": "Caboolture Hospital",
+		"lat": "-27.080067",
+		"lon": "152.963719"
+	},
+	{
+		"id": "1627",
+		"name": "Redcliffe Hospital",
+		"lat": "-27.22731",
+		"lon": "153.103559"
+	},
+	{
+		"id": "KIL",
+		"name": "Kilcoy Hospital",
+		"lat": "-26.9411",
+		"lon": "152.560811"
+	},
+	{
+		"id": "SVPHN",
+		"name": "St Vincents Private Hospital Northside",
+		"lat": "-27.392259",
+		"lon": "153.023747"
+	},
+	{
+		"id": "SAH",
+		"name": "St Andrews Private Hospital",
+		"lat": "-27.461039",
+		"lon": "153.021532"
+	},
+	{
+		"id": "WEH",
+		"name": "Wesley Private Hospital",
+		"lat": "-27.477312",
+		"lon": "152.998234"
+	},
+	{
+		"id": "NWPH",
+		"name": "North West Private Hospital",
+		"lat": "-27.39446",
+		"lon": "152.991936"
+	},
+	{
+		"id": "PPVH",
+		"name": "Peninsula Private Hospital",
+		"lat": "-27.229647",
+		"lon": "153.093377"
+	},
+	{
+		"id": "MHH",
+		"name": "Morayfield Health Hub",
+		"lat": "-27.098153",
+		"lon": "152.950665"
+	},
+	{
+		"id": "PAH",
+		"name": "Princess Alexandra Hospital",
+		"lat": "-27.500697",
+		"lon": "153.032985"
+	},
+	{
+		"id": "MAH",
+		"name": "Mater Adults Hospital",
+		"lat": "-27.485321",
+		"lon": "153.027379"
+	},
+	{
+		"id": "QCH",
+		"name": "Queensland Childrens Hospital",
+		"lat": "-27.484063",
+		"lon": "153.02729"
+	},
+	{
+		"id": "LCH",
+		"name": "Logan Hospital",
+		"lat": "-27.670844",
+		"lon": "153.140788"
+	},
+	{
+		"id": "1338",
+		"name": "QEII Hospital",
+		"lat": "-27.559769",
+		"lon": "153.050451"
+	},
+	{
+		"id": "1339",
+		"name": "Redlands Hospital",
+		"lat": "-27.541467",
+		"lon": "153.251215"
+	},
+	{
+		"id": "1341",
+		"name": "Wynnum Hospital",
+		"lat": "-27.46468",
+		"lon": "153.181043"
+	},
+	{
+		"id": "ME164",
+		"name": "Mater Mothers Hospital",
+		"lat": "-27.485321",
+		"lon": "153.027379"
+	},
+	{
+		"id": "BH",
+		"name": "Beaudesert Hospital",
+		"lat": "-27.985278",
+		"lon": "153.002923"
+	},
+	{
+		"id": "MRC",
+		"name": "Marie Rose Centre Dunwich",
+		"lat": "-27.4972",
+		"lon": "153.39972"
+	},
+	{
+		"id": "GPH",
+		"name": "Greenslopes Private Hospital",
+		"lat": "-27.512696",
+		"lon": "153.048005"
+	},
+	{
+		"id": "ME112",
+		"name": "Mater Private Hospital",
+		"lat": "-27.483584",
+		"lon": "153.029015"
+	},
+	{
+		"id": "ME711",
+		"name": "Weinam Creek Marina",
+		"lat": "-27.619064",
+		"lon": "153.309272"
+	},
+	{
+		"id": "GCH",
+		"name": "Gold Coast University Hospital",
+		"lat": "-27.9589972",
+		"lon": "153.382139"
+	},
+	{
+		"id": "6SVR",
+		"name": "Robina Hospital",
+		"lat": "-28.070229",
+		"lon": "153.376747"
+	},
+	{
+		"id": "THH",
+		"name": "Tweed Heads Hospital",
+		"lat": "-28.1782",
+		"lon": "153.545169"
+	},
+	{
+		"id": "GCUH6",
+		"name": "Gold Coast Uni Hosp Paediatric",
+		"lat": "-27.9589972",
+		"lon": "153.382139"
+	},
+	{
+		"id": "APH",
+		"name": "Allamanda Private Hospital",
+		"lat": "-27.973226",
+		"lon": "153.408215"
+	},
+	{
+		"id": "JFH",
+		"name": "John Flynn Private Hospital",
+		"lat": "-28.154205",
+		"lon": "153.489379"
+	},
+	{
+		"id": "1792",
+		"name": "Pindara Private Hospital",
+		"lat": "-28.006309",
+		"lon": "153.393667"
+	},
+	{
+		"id": "IGH",
+		"name": "Ipswich Hospital",
+		"lat": "-27.619608",
+		"lon": "152.758595"
+	},
+	{
+		"id": "BOH",
+		"name": "Boonah Hospital",
+		"lat": "-27.999185",
+		"lon": "152.678"
+	},
+	{
+		"id": "1643",
+		"name": "Laidley Hospital",
+		"lat": "-27.632507",
+		"lon": "152.40067"
+	},
+	{
+		"id": "HGAT",
+		"name": "Gatton District Hospital",
+		"lat": "-27.567064",
+		"lon": "152.276795"
+	},
+	{
+		"id": "EH",
+		"name": "Esk Hospital",
+		"lat": "-27.2396",
+		"lon": "152.418028"
+	},
+	{
+		"id": "TBH",
+		"name": "Toowoomba Base Hospital",
+		"lat": "-27.56938",
+		"lon": "151.9457"
+	},
+	{
+		"id": "HTWBSV",
+		"name": "St Vincents Private Hospital",
+		"lat": "-27.566674",
+		"lon": "151.973115"
+	},
+	{
+		"id": "ANH",
+		"name": "St Andrews Ipswich",
+		"lat": "-27.61945",
+		"lon": "152.763733"
+	}
+]
+}

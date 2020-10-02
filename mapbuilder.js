@@ -71,12 +71,16 @@ function radixBucketSort (arr) {
 
 $(document).ready(async function () {
 	var script = document.createElement('script');
-	/*script.onload = function () {
-	    //do stuff with the script
-	};*/
 	script.src = "https://appulance.com/mapbuilder/js/infobox.min.js";
-
 	document.head.appendChild(script); //or something of the likes
+
+        var hospitals_js = document.createElement('script');
+        hospitals_js.src = "https://appulance.com/mapbuilder/hospitals/hospitals.js";
+        document.head.appendChild(hospitals_js); //or something of the likes
+
+        var stations_js = document.createElement('script');
+        stations_js.src = "https://appulance.com/mapbuilder/stations/stations.js";
+        document.head.appendChild(stations_js); //or something of the likes
 
 //	alert("This is a test version of Map Builder and could stop working at any time.");
 
@@ -106,6 +110,9 @@ $(document).ready(async function () {
 	addMarkersToTimeline(markers);
 	addMarkersToAliases(markers);
 	$("#map-form").show();
+7
+	HospitalsIterator();
+	StationsIterator();
 
         $("#map-form").append("<div id='info'></div>");
 	$("#info").hide();
@@ -197,7 +204,7 @@ $(document).ready(async function () {
 
                        //console.log(selected + "=" + current + "? " + selected.includes(current));
 
-                        if (selected.includes(current) == true) {
+                        if (selected.includes(current) == true || current == "station" || current == "hospital") {
                                 markers[i].setVisible(true);
 				if (label_status) $(label_id).show();
 
