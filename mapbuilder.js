@@ -1,12 +1,6 @@
 var bounds = new google.maps.LatLngBounds();
 //var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-var mapOptions = {
-    	zoom: 2,
-		center: new google.maps.LatLng(0, 0),
-		styles = styles['default'],
-}
-
 var markers = [];
 
 $(document).ready(async function () {
@@ -14,19 +8,17 @@ $(document).ready(async function () {
 	script.src = "https://appulance.com/mapbuilder/js/infobox.min.js";
 	document.head.appendChild(script);
 
-        var hospitals_js = document.createElement('script');
-        hospitals_js.src = "https://appulance.com/mapbuilder/hospitals/hospitals.js";
-        document.head.appendChild(hospitals_js);
+	var hospitals_js = document.createElement('script');
+	hospitals_js.src = "https://appulance.com/mapbuilder/hospitals/hospitals.js";
+	document.head.appendChild(hospitals_js);
 
-        var stations_js = document.createElement('script');
-        stations_js.src = "https://appulance.com/mapbuilder/stations/stations.js";
-        document.head.appendChild(stations_js);
+	var stations_js = document.createElement('script');
+	stations_js.src = "https://appulance.com/mapbuilder/stations/stations.js";
+	document.head.appendChild(stations_js);
 
-        var styles_js = document.createElement('script');
-        styles_js.src = "https://appulance.com/mapbuilder/styles.js";
-        document.head.appendChild(styles_js);
-
-//	alert("This is a test version of Map Builder and could stop working at any time.");
+	var styles_js = document.createElement('script');
+	styles_js.src = "https://appulance.com/mapbuilder/styles.js";
+	document.head.appendChild(styles_js);
 
 	await sleep(400);
 
@@ -45,6 +37,12 @@ $(document).ready(async function () {
 	ga('set', 'page', 'mapViewWithPOI');
 	ga('send', 'pageview');
 
+
+	var mapOptions = {
+    	zoom: 2,
+		center: new google.maps.LatLng(0, 0),
+		styles: styles['default'],
+	}
 	map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
 	addMarkers();
