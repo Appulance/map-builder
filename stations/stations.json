@@ -791,6 +791,18 @@
     "station": "Pimpama",
     "lat": -27.814353,
     "lon": 153.291454
+  },
+  {
+	"id": "yarrabilba",
+	"station": "Yarrabilba",
+	"lat": -27.813819,
+	"lon": 153.121096
+  },
+  {
+	"id": "munruben",
+	"station": "Munruben",
+	"lat": -27.757503,
+	"lon": 153.024844
   }
 ]
 }
