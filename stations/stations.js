@@ -58,7 +58,6 @@ Station.prototype.addMarker = function() {
 	});
 
 	marker.setMap(map);
-	//markers.push(marker);
 }
 
 

@@ -1,6 +1,4 @@
 var bounds = new google.maps.LatLngBounds();
-//var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
 var markers = [];
 
 $(document).ready(async function () {
@@ -42,6 +40,8 @@ $(document).ready(async function () {
     	zoom: 2,
 		center: new google.maps.LatLng(0, 0),
 		styles: styles['default'],
+		streetViewControl: false,
+		mapTypeControlOptions: { mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.HYBRID] }
 	}
 	map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
@@ -54,36 +54,32 @@ $(document).ready(async function () {
 	HospitalsIterator();
 	StationsIterator();
 
-        $("#map-form").append("<div id='info'></div>");
+	// add info box
+    $("#map-form").append("<div id='info'></div>");
 	$("#info").hide();
 
 	$("#timeline").change(function() {
 		selected = $(this).val(); 
 		selected_alias = $("#aliases").val();
-		//console.log("Selected: " + selected);
 		selected_times_count = $(this).val().length;
 
-		//bounds = new google.maps.LatLngBounds();
-
-//	        ga('set', 'page', 'timelineChange');
-//	        ga('send', 'pageview');
 		ga('send', 'event', 'Timeline', 'Time Selected');
 
 		for (var i = 0; i < markers.length; i++) {
-			//console.log("iterating...");
 			current = markers[i].serial.toString();
 			current_alias = markers[i].alias.toString();
 			label_id = ".infobox-" + markers[i].serial.toString();
-			//console.log(selected + "=" + current + "? " + selected.includes(current));
 
 			if (selected.includes(current) == true && selected_alias.includes(current_alias)) {
 				markers[i].setVisible(true);
-				//bounds.extend(markers[i].position);
+
+				// zoom to pin?
+				bounds.extend(markers[i].position);
+
+				// show label for this pin
 				if (label_status) $(label_id).show();
 
 				if (selected_times_count == 1) {
-				//	$("#info").remove();
-				//	$("#map-form").append("<div id='info'></div>");
 					tooltip = markers[i].title.replace(/\n/g, "<br />");
 					$("#info").html(tooltip);
 					$("#info").show();
@@ -95,6 +91,8 @@ $(document).ready(async function () {
 				if (label_status) $(label_id).hide();
 			}
 		}
+
+		//map.fitBounds(bounds);
 	});
 
 	var label_status = $("#label-toggle").is(":checked");
@@ -127,54 +125,55 @@ $(document).ready(async function () {
 	});
 
 	$("#aliases").change(function() {
-                selected = $(this).val(); 
-                //console.log("Selected: " + selected);
+        selected = $(this).val(); 
 		bounds = new google.maps.LatLngBounds();
 		$("#timeline").empty(); 
 
-//                ga('set', 'page', 'aliasChange');
- //               ga('send', 'pageview');
 		ga('send', 'event', 'Aliases', 'Alias Change');
 
-                for (var i = 0; i < markers.length; i++) {
-                        //console.log("iterating...");
-//                        current = markers[i].alias.toString();
+		for (var i = 0; i < markers.length; i++) {
 			current = markers[i].alias; 
-                        label_id = ".infobox-" + markers[i].serial.toString();
+			label_id = ".infobox-" + markers[i].serial.toString();
 
-                       //console.log(selected + "=" + current + "? " + selected.includes(current));
+			if (selected.includes(current) == true || current == "station" || current == "hospital") {
+				markers[i].setVisible(true);
 
-                        if (selected.includes(current) == true || current == "station" || current == "hospital") {
-                                markers[i].setVisible(true);
 				if (label_status) $(label_id).show();
+					// reset bounds to group of related pins
+					bounds.extend(markers[i].position);
 
-				bounds.extend(markers[i].position);
-//				serial = markers[i].serial.toString();
-				serial = markers[i].serial;
-				datetime = new Date(markers[i].serial);
-				$('#timeline').append(new Option(datetime.toLocaleDateString("en-AU") + " " + datetime.toLocaleTimeString("en-AU"), serial, true, true));
-                        } else {
-                                markers[i].setVisible(false);
-				if (label_status) $(label_id).hide();
-                        }
-                }
-		map.fitBounds(bounds);
+					serial = markers[i].serial;
+					datetime = new Date(markers[i].serial);
+					$('#timeline').append(new Option(datetime.toLocaleDateString("en-AU") + " " + datetime.toLocaleTimeString("en-AU"), serial, true, true));
+				} else {
+					markers[i].setVisible(false);
+					if (label_status) $(label_id).hide();
+				}
+			}
+			
+			// zoom to selected pins
+			map.fitBounds(bounds);
         });
 });
 
 Object.defineProperty(String.prototype, 'hashCode', {
-  value: function() {
-    var hash = 0, i, chr;
-    for (i = 0; i < this.length; i++) {
-      chr   = this.charCodeAt(i);
-      hash  = ((hash << 5) - hash) + chr;
-      hash |= 0; // Convert to 32bit integer
-    }
-    return hash;
-  }
+	// string -> hash
+	value: function() {
+		var hash = 0, i, chr;
+		for (i = 0; i < this.length; i++) {
+			chr = this.charCodeAt(i);
+			hash  = ((hash << 5) - hash) + chr;
+			hash |= 0; // Convert to 32bit integer
+		}
+
+    	return hash;
+	}
 });
 
 var stringToColour = function(str) {
+	// string to colour
+	// in this instance we use the hashed string
+
 	var hash = 0;
 	for (var i = 0; i < str.length; i++) {
 		hash = str.charCodeAt(i) + ((hash << 5) - hash);
@@ -188,8 +187,8 @@ var stringToColour = function(str) {
 }
 
 function getMarkerURLWithLabel (str, lab) {
-        var color = stringToColour(str).substr(1);
-        return "http://www.googlemapsmarkers.com/v1/" + "test" + "/" + "FFFFFF" + "/"  + color + "/" + ldColour(color, 40) + "/";
+	var color = stringToColour(str).substr(1);
+    return "http://www.googlemapsmarkers.com/v1/" + "test" + "/" + "FFFFFF" + "/"  + color + "/" + ldColour(color, 40) + "/";
 }
 
 function getMarkerURL(str) {
@@ -198,6 +197,7 @@ function getMarkerURL(str) {
 }
 
 function ldColour(col,amt) {
+	// lighten hex colour
     var usePound = false;
     if ( col[0] == "#" ) {
         col = col.slice(1);
