@@ -1,12 +1,12 @@
 var bounds = new google.maps.LatLngBounds();
-const bounds_follows_pin = true;
+const bounds_follows_pin = false;
 var markers = [];
 
 $(document).ready(async function () {
 	console.log("Loading...");
-	$("body").prepend("<div id='loading'><div class='spinner'></div> Loading...</div>");
+	$("body").prepend("<div id='loading'><div class='spinner'></div> <span>Loading...</span></div>");
 
-	console.log("Loading external scripts...");
+	console.log("Adding external scripts...");
 	var script = document.createElement('script');
 	script.src = "https://appulance.com/mapbuilder/js/infobox.js";
 	document.head.appendChild(script);
@@ -23,6 +23,7 @@ $(document).ready(async function () {
 	styles_js.src = "https://appulance.com/mapbuilder/styles.js";
 	document.head.appendChild(styles_js);
 
+	console.log("Loading external scripts...");
 	await sleep(400);
 
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -46,6 +47,7 @@ $(document).ready(async function () {
 		center: new google.maps.LatLng(0, 0),
 		styles: styles['default'],
 		streetViewControl: false,
+		maxZoom: 18,
 		mapTypeControlOptions: { mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.HYBRID] }
 	}
 	map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
@@ -60,15 +62,19 @@ $(document).ready(async function () {
 		return a.serial - b.serial;
 	});
 
-	console.log("Adding markers to timeline...");
 	addMarkersToTimeline(markers);
 
-	console.log("Adding Aliases to timeline...");
+	console.log("Adding aliases to timeline...");
 	addMarkersToAliases(markers);
 
-	console.log("Adding POIs...");
-	HospitalsIterator();
-	StationsIterator();
+	try {
+		console.log("Adding POIs...");
+		HospitalsIterator();
+		StationsIterator();
+	} catch {
+		alert("Error loading POIs... reloading.");
+		location.reload();
+	}
 
 	// add info box
     $("#map-form").append("<div id='info'></div>");
@@ -114,11 +120,12 @@ $(document).ready(async function () {
 
 		if (bounds_follows_pin) {
 			var originalMaxZoom = map.maxZoom;
-			map.setOptions({maxZoom: 15});
+			console.log("original max zoom:" + originalMaxZoom);
+			map.setOptions({maxZoom: 12});
 			map.fitBounds(bounds);
 			map.setOptions({maxZoom: originalMaxZoom});
 		} else {
-			map.fitBounds(bounds, 500);
+			map.fitBounds(bounds);
 		}
 	});
 
@@ -147,7 +154,7 @@ $(document).ready(async function () {
 	$("#night-toggle").change(function() {
 		night_status = $("#night-toggle").is(":checked");
 
-		if (night_status == true) {
+		if (poi_status == true) {
 			// check what aliases and timelines are selected, and show them
 			map.setOptions({ styles: styles['dark'] });
 			$("#map-form").css('color', 'white');
@@ -155,6 +162,17 @@ $(document).ready(async function () {
 			// otherwise hide
 			map.setOptions({ styles: styles['default'] });
 			$("#map-form").css('color', 'black');
+		}
+	});
+
+	$("#poi-toggle").change(function() {
+		poi_status = $("#poi-toggle").is(":checked");
+
+		if (poi_status == true) {
+			$(".poibox").show();
+		} else  {
+			$(".poibox").hide();
+
 		}
 	});
 
@@ -329,7 +347,6 @@ function invertColor(hex, bw) {
 
 function addMarker(lat, lon, datetime, alias="Single", label = "", color = "blue") {
 	var position = new google.maps.LatLng(lat, lon);
-
 	var date = new Date(datetime);
 	var time = date.toLocaleString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
 	var pinUrl = getMarkerURL(alias);
@@ -395,16 +412,17 @@ function timelineClickHandler() {
 }
 
 function markerClickHandler(serial, date, alias="Single") {
-	ga('send', 'event', 'Markers', 'Marker Clicked');
+	console.log("marker clicked: " + serial + "|" + date + "|" + alias);
+	ga('send', 'event', 'Markers', 'Marker Clicked: '+ serial + "|" + date + "|" + alias);
 
 	$("#aliases").val([]);
 	$('#aliases option[value="' + alias + '"]').prop("selected", true).change();
 
-	$("#timeline").val([]);
-	$("#timeline option[value='" + serial + "']").prop("selected", true).change();
-
 	$("#dates").val([]);
 	$("#dates option[value='" + date + "']").prop("selected", true).change();
+
+	$("#timeline").val([]);
+	$("#timeline option[value='" + serial + "']").prop("selected", true).change();
 
 	scrollToOption($("#aliases"), alias);
 	scrollToOption($("#timeline"), serial);
@@ -484,6 +502,12 @@ function addMarkersToTimeline(arr) {
   		}
 	}, []);
 
+	$("#dates-all").on('click', function() {
+		ga('send', 'event', 'Dates', 'Select All');
+		$("select#dates >  option").prop("selected", true);
+		$("select#dates").change();
+	});
+
 	for (var i = 0; i < dates.length; i++) {
 		date = dates[i].date;
 		addDateEntryToTimeline(date, date, $("#dates"));
@@ -535,7 +559,7 @@ function addMarkersToAliases(arr) {
 	$("<hr/>").insertBefore("#aliases");
     $("<button id='aliases-all' type='button'>Select All Vehicles</button>").insertBefore("#aliases");
 	$("#aliases").parent().prepend("<div id='label-toggle-container'><label for='label-toggle'><input type='checkbox' id='label-toggle' /> Show labels?</label></div>");
-
+	$("#aliases").parent().prepend("<div id='poi-toggle-container'><label for='poi-toggle'><input type='checkbox' id='poi-toggle' /> Show POI labels?</label></div>");
 	$("#aliases").parent().prepend("<div id='night-toggle-container'><label for='night-toggle'><input type='checkbox' id='night-toggle' /> Dark mode?</label></div>");
 
 	$("#aliases-all").on('click', function() {

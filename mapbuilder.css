@@ -92,6 +92,7 @@ select[multiple] {
 	width: 50px;
 	padding: 2px 4px;
 	overflow: hidden;
+	display: none;
 }
 	.poibox:hover { opacity: 1; }
 
@@ -101,6 +102,7 @@ color: #EFEFEF;
 width:20px;
 }
 
+#poi-toggle-container,
 #night-toggle-container,
 #label-toggle-container {
 	font-size: 0.7em;
@@ -111,6 +113,7 @@ width:20px;
 	background-color: rgba(0,0,0, 0.5);*/
 }
 
+#poi-toggle-container label,
 #night-toggle-container label,
 #label-toggle-container label {
   display: block;
@@ -118,6 +121,7 @@ width:20px;
   text-indent: -15px;
 }
 
+#poi-toggle-container input,
 #night-toggle-container input,
 #label-toggle-container input {
   width: 13px;
