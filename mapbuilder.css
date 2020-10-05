@@ -29,12 +29,15 @@ select[multiple] {
   display: block;
 }
 	#aliases {
-		margin-top: 5px;
 		height: 150px;
 	}
 
+	#dates {
+		height: 75px;
+	}
+
 #info {
-	width: 153px;
+	width: 140px;
 	background-color: white;
 	padding: 10px;
 	font-size: 0.7rem;
@@ -50,8 +53,8 @@ select[multiple] {
 		margin-bottom: 5px;
 	}
 
-#timeline-all, #aliases-all {
-	margin: 5px auto 5px; 
+#timeline-all, #aliases-all, #dates-all {
+	margin: 0px auto 5px; 
 	padding: 7px 10px;
 	font-size: 0.7rem;
 }
