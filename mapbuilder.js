@@ -3,6 +3,9 @@ const bounds_follows_pin = true;
 var markers = [];
 
 $(document).ready(async function () {
+	console.log("Loading...");
+	$("body").prepend("<div id='loading'><div class='spinner'></div> Loading...</div>");
+
 	var script = document.createElement('script');
 	script.src = "https://appulance.com/mapbuilder/js/infobox.js";
 	document.head.appendChild(script);
@@ -180,7 +183,11 @@ $(document).ready(async function () {
 			
 			// zoom to selected pins
 			map.fitBounds(bounds);
-        });
+		});
+		
+		google.maps.event.addListener(map, "idle", function() {
+			$("#loading").hide();
+		});		
 });
 
 Object.defineProperty(String.prototype, 'hashCode', {
@@ -419,8 +426,6 @@ function addMarkersToTimeline(arr) {
 		$("select#timeline").change();
 	});
 
-	console.log(arr);
-
 	var dates = arr.reduce((acc, current) => {
 		x = acc.find(item => item.date === current.date);
 		if (!x) {
@@ -429,8 +434,6 @@ function addMarkersToTimeline(arr) {
     			return acc;
   		}
 	}, []);
-
-	console.log(dates);
 
 	for (var i = 0; i < dates.length; i++) {
 		date = dates[i].date;
