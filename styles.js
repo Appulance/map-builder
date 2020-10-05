@@ -405,7 +405,7 @@ const styles = {
       "featureType": "poi.medical",
       "stylers": [
         {
-          "visibility": "on"
+          "visibility": "off"
         },
         {
           "weight": 7.5
@@ -417,7 +417,7 @@ const styles = {
       "elementType": "labels",
       "stylers": [
         {
-          "visibility": "on"
+          "visibility": "off"
         },
         {
           "weight": 7.5
