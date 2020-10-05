@@ -18,6 +18,7 @@ html, body, #map-canvas {
 	border-radius: 5px;
 	border: 1px solid rgba(0,0,0,0.5);
 	padding: 5px 10px;
+	width: 150px;
 	top: 100px;
 /*	transform: translateY(-50%); */
 	text-align: center;
@@ -25,7 +26,7 @@ html, body, #map-canvas {
 
 select[multiple] {
   height:350px;
-	width: 175px;
+	width: 150px;
   display: block;
 }
 	#aliases {
@@ -37,11 +38,10 @@ select[multiple] {
 	}
 
 #info {
-	width: 140px;
 	background-color: white;
-	padding: 10px 10px 20px;
+	padding: 10px 10px;
 	font-size: 0.7rem;
-	margin-top: 0px; margin-bottom: 5px;
+	margin-top: 10px; margin-bottom: 5px;
 	border: 1px solid #333;
 	font-family: "Consolas", monospaced;
 	text-align: left;
